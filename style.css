@@ -1,0 +1,192 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  scroll-behavior: smooth;
+  font-family: system-ui;
+}
+:root[data-theme="dark"]{
+  --text-color: #ffffff;
+  --back-color: #222222;
+  --back-color-transparent: rgb(34, 34, 34,0.5);
+}
+:root[data-theme="light"]{
+  --back-color: #f2f2f2;
+  --text-color: #333333;
+  --back-color-transparent: rgb(242, 242, 242,0.5);
+}
+:root{
+  --text-color: #060606;
+  --back-color: #0f0d0d;
+  --back-color-transparent: rgba(32, 19, 19, 0.5);
+  --padding: 1rem;
+}
+body{
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+  padding-inline: 0px;
+} .nav a:hover{border: 1px solid var(--text-color); transition: 0.3s; padding-inline: 10px;}
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--back-color-transparent);
+  color: var(--text-color);
+  width: 98vw;
+  padding: var(--padding);
+  backdrop-filter: blur(1px);
+  border: 1px solid var(--back-color);
+  margin:0.5rem;
+  border-radius: 1.5rem;
+}
+.nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+section{
+  height:100vh;
+}
+h2{
+  font-size: 2rem;
+  padding: 30px;
+  color: var(--text-color);
+}p{color: var(--text-color);}
+h1{
+  font-size: 3rem;;text-align: center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+input{
+  background-color: var(--back-color);
+  color:var(--text-color);
+}
+table{
+  color: var(--text-color);
+  width: 750px;
+  padding: 50px;
+}label{color: var(--text-color);}
+th,td{
+  font-size: 28px;
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--text-color);
+}tr:hover{background-color: #333333;color: #f2f2f2;}
+.home{
+  background-image: url(assets/back.jpg);
+  box-shadow: inset 0 0 0 2000px var(--back-color-transparent);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+.explore{
+  background-image: url(assets/piano.jpg);
+  background-size: cover;
+  display:grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.theme{
+  width:150px;
+  height: 150px;
+  border-radius: 25%;
+  background-color: var(--back-color-transparent);
+  border: 1px solid var(--back-color);
+  backdrop-filter: blur(1px);
+  color: var(--text-color);
+  
+} .theme h1{align-items: center;font-size: 6rem;}.theme:hover{border: 1px solid var(--text-color); transition: 0.3s;}
+.back{
+  width: 100vw;
+  height: 100vh;
+}
+.exploreleft{
+  width:50%; height:50%; float:left;
+  background-color: var(--back-color);
+  color: var(--text-color);
+  border-radius: 2rem;
+  align-items: center; text-align: center;
+}.exploreleft:hover{border:1px solid var(--text-color); transition: 0.3s;}
+.exploreright{
+  width:50%; height:50%;float: right;
+  background-color: var(--back-color);
+  color: var(--text-color);
+  border-radius: 2rem;
+  align-items: center; text-align: center;
+}.exploreright:hover{border:1px solid var(--text-color); transition: 0.3s;}
+.exploreelement{
+  background-color: var(--back-color-transparent);
+  width:50vw; height: 88%; margin-top: 75px;
+}
+
+.exploreelement img{
+     max-width: 70%;
+}
+
+footer{
+  background-color: var(--back-color);
+  color: var(--text-color);
+  padding-left: 50px;
+}
+.booking-form {
+  max-width: 400px;
+  background-color: var(--back-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.booking-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: var(--back-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.booking-section {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(assets/disc-back.jpg);
+  background-size: cover;
+}
