@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎶 Concert Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#1980">Home</a></li>
+            <li><a href="#2010">Explore</a></li>
+            <li><a href="#2000">Booking</a></li>
+            <li> <a href="https://github.com/zahidhasan61966/concert_login/blob/4ae2eaec6cde759da8473b8a68059782151b86d3/auth.html"> Log in </a></li>
+        </ul>
+    </div>
+    <section class="home" id="1980">
+        <h1 style="padding: 100px 15px 0 0;border-bottom: 1px solid white;text-align: right;">Where Music Comes to Life :<br>Dive Right In! </h1><br>
+        <a id="themetoggle" class="theme"><h1>♮</h1></a>
+    </section>
+                                                                                 <!--This is the section when you click explore-->
+    <section class="explore" id="2010">
+        <div class="exploreelement">
+            <h1 style="margin-top: 150px;">EXPLORE!</h1><br>
+            <h1>→</h1>
+            <h2>See What's Hot near your area</h2>
+        </div>
+        <div class="exploreelement">
+            <div class="exploreleft"><a href="#2000"><img src="assets/utopia.jpg"></a><p>"Travis Scott"<br>- 6th Jan, 2024</p></div>
+            <div class="exploreleft"><a href="#2000"><img src="assets/guts.jpg"></a><br><p>"Olivia Rodrigo"<br>- 24th March, 2024</p></div>
+            <div class="exploreright"><a href="#2000"><img src="assets/blink.jpg"></a><br><p>"Blink-182"<br>- 12th April, 2024</p></div>
+            <div class="exploreright"><a href="#2000"><img src="assets/walker.jpeg"></a><br><p>"Alan Walker"<br>- 20th May,2024</p></div>
+        </div>
+        <div class="exploreelement">
+            <div class="exploreleft"><a href="#2000"><img src="assets/DojaCat-Scarlet.jpg"></a><br><p>"Doja Cat"<br>- 25th May, 2024</p></div>
+            <div class="exploreleft"><a href="#2000"><img src="assets/hope.png"></a><br><p>"NF"<br>- 29th May, 2024</p></div>
+            <div class="exploreright"><a href="#2000"><img src="assets/postm.avif"></a><br><p>"Post Malone"<br>- 8th June, 2024</p></div>
+            <div class="exploreright"><a href="#2000"><img src="assets/metallica.jpg"></a><br><p>"Metallica"<br>- 27th July, 2024</p></div>
+        </div>
+    </section>
+    <section class="booking-section" id="2000">
+        <div class="booking-form">
+            <h2>Book Your Tickets</h2>
+            <form id="ticketForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <!-- Add more payment options as needed -->
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <em>&copy; All rights reserved</em><br>
+        <em>Made with love and fun</em>&nbsp;<a style="padding-left: 350px;" href="mailto:music123@gmail.com">Mail Us</a>&nbsp;<a style="padding-left: 350px;" href="tel:7246274672">Contact no.</a><br>
+        <em>Yuvraj, Zahid, Hiram, Karan, Jashan</em>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
