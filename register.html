@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Register</title>
+
+  <!-- Custom styles for this template -->
+  <link href="auth.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="tsparticles"></div>
+  <main class="box">
+    <h2>Register</h2>
+    <!-- Add an ID to the form for easy selection in JavaScript -->
+    <form id="registrationForm" action="/register" method="POST">
+      <div class="inputBox">
+        <label for="userName">Username</label>
+        <input type="text" name="userName" id="userName" placeholder="Type your username" required />
+      </div>
+      <div class="inputBox">
+        <label for="userPassword">Password</label>
+        <input type="password" name="userPassword" id="userPassword" placeholder="Type your password" required />
+      </div>
+      <div class="inputBox">
+        <label for="userConfirmPassword">Confirm Password</label>
+        <input type="password" name="userConfirmPassword" id="userConfirmPassword" placeholder="Confirm your password" required />
+      </div>
+      <button type="submit" style="float: left;">Submit</button>
+      <a class="button" href="login.html" style="float: left;">Login</a>
+    </form>
+
+    <!-- Add an element to display registration messages -->
+    <div id="registrationMessage"></div>
+  </main>
+  <footer></footer>
+
+ 
+  <!-- Add your JavaScript for handling registration responses -->
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      try {
+        const response = await fetch('http://localhost:3000/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(Object.fromEntries(formData)),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        const registrationMessage = document.getElementById('registrationMessage');
+        registrationMessage.textContent = result.message;
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    });
+  </script>
+</body>
+
+</html>
